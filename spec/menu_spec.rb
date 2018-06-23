@@ -1,9 +1,10 @@
-require 'menu.rb'
+require 'menu'
 
 describe Menu do
-  subject(:menu) { :described_class.new }
+  let(:menu) { described_class.new }
 
-  it 'shows a list of chinese dishes' do
-    expect(menu.show_menu).to eq menu.chinese
-  end
+  it 'should list price of dishes' do
+     menu = Menu.new
+     expect(subject.price_list).to eq menu.price_list
+    end
 end
