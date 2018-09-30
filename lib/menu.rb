@@ -1,19 +1,24 @@
-require_relative '../lib/menu.rb'
-
 class Menu
+  attr_reader :menu_pricelist
 
-attr_reader :price_list
+  def initialize
+    @menu_pricelist = {
+      Stir_fry_noodles: 7.45,
+      Beef_Burgar: 5.99,
+      Chips: 3.00,
+      Curry: 7.99,
+      Stir_fry_rice: 8.99
+    }
 
- def initialize
-   @price_list = {
-     "stir fry noodle" => 3.49,
-     "pizza" => 3.60,
-     "sushi" => 4.50,
-     "curry bento" => 2.40
-   }
- end
+  end
 
- def price_list
-   @price_list
- end
+  def title
+    "Yvonne's Menu"
+  end
+
+  def list_menu
+    @menu_pricelist.collect do |item, price|
+    "#{item} £#{price}"
+    end
+  end
 end
