@@ -1,5 +1,6 @@
 require 'menu'
 
+describe 'menu' do
 # describe Menu do
 #   let(:menu) { described_class.new}
 # # As a customer
@@ -9,6 +10,11 @@ require 'menu'
 #     menu = Menu.new
 #     expect{menu.}
 #   end
+
+it 'should show list of dishes' do
+  menu = Menu.new
+  expect(menu.list_menu).to include "Beef_Burgar £5.99"
+end
 
 # As a customer
 # So that I can order the meal I want
@@ -23,4 +29,4 @@ require 'menu'
 # I would like to receive a text such as "Thank you! Your order was placed and will be delivered before 18:52" after I have ordered
 
 
-# end
+end
