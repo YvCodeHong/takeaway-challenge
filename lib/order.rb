@@ -1,2 +1,7 @@
 class Order
-end 
+
+  def start
+    0 
+  end
+
+end
