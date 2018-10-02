@@ -9,7 +9,6 @@ class Menu
       Curry: 7.99,
       Stir_fry_rice: 8.99
     }
-
   end
 
   def title
